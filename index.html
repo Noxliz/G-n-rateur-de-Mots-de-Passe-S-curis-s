@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générateur de Mots de Passe Sécurisés</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Générateur de Mots de Passe</h1>
+        <div class="password-display" id="password"></div>
+        
+        <div class="password-info">
+            <div>Force : <span id="strength">-</span></div>
+            <div>Temps de crack : <span id="crackTime">-</span></div>
+        </div>
+
+        <div class="controls">
+            <div class="length-control">
+                <label for="length">Longueur :</label>
+                <input type="number" id="length" min="8" max="64" value="16">
+            </div>
+            <div class="options">
+                <label><input type="checkbox" id="uppercase" checked> Majuscules (A-Z)</label>
+                <label><input type="checkbox" id="lowercase" checked> Minuscules (a-z)</label>
+                <label><input type="checkbox" id="numbers" checked> Chiffres (0-9)</label>
+                <label><input type="checkbox" id="symbols" checked> Symboles (!@#$%^&*)</label>
+                <label><input type="checkbox" id="excludeSimilar"> Exclure caractères similaires (1,l,I,0,O)</label>
+            </div>
+            <div class="buttons">
+                <button id="generate">Générer</button>
+                <button id="copy">Copier</button>
+            </div>
+        </div>
+
+        <div class="history">
+            <h3>Historique : <button id="clearHistory" class="clear-btn">Effacer</button></h3>
+            <ul id="history"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
